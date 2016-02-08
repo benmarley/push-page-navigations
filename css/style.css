@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Martel:400,600,700);
 @-moz-viewport {
   width: device-width;
   scale: 1;
@@ -30,7 +31,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Martel", serif;
   margin: 0;
   padding: 0;
 }
@@ -41,19 +42,24 @@ body.noscript .toggle-btn {
 }
 
 header {
-  padding: 0 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   position: relative;
-  background-color: #FFA542;
+  background-color: #CED6C3;
+}
+
+.title-heading {
+  color: #546971;
 }
 
 .toggle-btn {
   position: absolute;
   right: 1em;
-  top: 0;
+  top: 1em;
 }
 
-.navigation ul {
-  padding: 0;
+.slide-menu {
+  background-color: #81B5DC;
 }
 
 .navigation ul li {
@@ -66,16 +72,21 @@ header {
 
 .navigation ul a {
   padding: .5em 1em;
-  color: black;
+  color: #546971;
   text-decoration: none;
   display: block;
   border-bottom: 1px solid #ccc;
   text-align: center;
+  width: 60%;
+}
+
+.navigation ul a:hover {
+  background-color: #DEF1FF;
 }
 
 .toggle-btn,
 .close-btn {
-  color: #3A91B5;
+  color: #546971;
   text-decoration: none;
   height: 40px;
   width: 40px;
@@ -83,11 +94,17 @@ header {
 
 .toggle-btn:before,
 .close-btn:before {
-  border: 1px solid #ccc;
+  border: 2px solid #546971;
+  border-radius: 2px;
   display: inline-block;
   padding: 13px 11px;
   height: 40px;
   width: 40px;
+}
+
+.toggle-btn:hover,
+.close-btn:hover {
+  background-color: #DEF1FF;
 }
 
 .toggle-btn span,
@@ -97,6 +114,12 @@ header {
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+.close-btn {
+  position: absolute;
+  right: 1em;
+  top: 1em;
 }
 
 /**
@@ -142,6 +165,9 @@ header {
   .title-heading {
     position: absolute;
   }
+  .header {
+    height: 9em;
+  }
   .toggle-btn,
   .close-btn {
     display: none;
@@ -151,12 +177,14 @@ header {
     left: 35%;
   }
   .navigation ul a {
-    color: #3A91B5;
+    color: #546971;
     float: left;
     border: none;
     top-border: none;
-    font-size: 140%;
-    border-right: 2px solid #3A91B5;
+    font-size: 100%;
+    border-right: 2px solid #546971;
+    padding: 0 1em;
+    width: auto;
   }
   .navigation ul li:first-child a {
     border-top: none;
