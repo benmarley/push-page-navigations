@@ -38,6 +38,8 @@ header {
 
 .title-heading {
   color: $deep-blue;
+  position: relative;
+  left: 1em;
 }
 
 .toggle-btn {
@@ -52,11 +54,10 @@ header {
 }
 
 .navigation ul{
-  
   li {
     list-style-type: none;
     &:first-child a {
-      border-top: 1px solid $light-grey;
+      border-top: 1px solid $white;
     }
   }
   a {
@@ -64,9 +65,12 @@ header {
     color: $deep-blue;
     text-decoration: none;
     display: block;
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 2px solid $very-lightblue;
+    border-left: 2px solid $very-lightblue;
+    border-right: 2px solid $very-lightblue;
     text-align: center;
     width: 60%;
+    max-width: 12em;
     &:hover {
       background-color: $very-lightblue;
     }
@@ -122,7 +126,7 @@ top: 1em;
       height: 100%;
       position: relative;
       transform: translateX(0);
-      transition: all 600ms ease-in-out;
+      transition: all 700ms ease-out;
     }
     &[data-state='slide-open'] .sliding-canvas {
       transform: translateX(-100%);
@@ -132,7 +136,6 @@ top: 1em;
     }
   }
 
-  //Navigation
   .navigation {
     position: absolute;
     width: 100%;
@@ -150,6 +153,7 @@ top: 1em;
 
   .title-heading {
     position: absolute;
+    left: 1em;
   }
 
   .header {
@@ -165,6 +169,7 @@ top: 1em;
   ul {
     position: relative;
     left: 35%;
+    top: 1em;
     a {
       color: $deep-blue;
       float: left;
@@ -183,12 +188,8 @@ top: 1em;
       border-right: none;
     }
   }
+} 
 }
-
- 
-}
-
-// show navigation on screen when there is no JS
 
 body.noscript .navigation {
   position: static;

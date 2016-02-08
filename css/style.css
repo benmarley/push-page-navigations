@@ -50,6 +50,8 @@ header {
 
 .title-heading {
   color: #546971;
+  position: relative;
+  left: 1em;
 }
 
 .toggle-btn {
@@ -67,7 +69,7 @@ header {
 }
 
 .navigation ul li:first-child a {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #fff;
 }
 
 .navigation ul a {
@@ -75,9 +77,12 @@ header {
   color: #546971;
   text-decoration: none;
   display: block;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #DEF1FF;
+  border-left: 2px solid #DEF1FF;
+  border-right: 2px solid #DEF1FF;
   text-align: center;
   width: 60%;
+  max-width: 12em;
 }
 
 .navigation ul a:hover {
@@ -139,7 +144,7 @@ header {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
-    transition: all 600ms ease-in-out;
+    transition: all 700ms ease-out;
   }
   .site-wrapper[data-state='slide-open'] .sliding-canvas {
     -webkit-transform: translateX(-100%);
@@ -164,6 +169,7 @@ header {
 @media only screen and (min-width: 60em) {
   .title-heading {
     position: absolute;
+    left: 1em;
   }
   .header {
     height: 9em;
@@ -175,6 +181,7 @@ header {
   .navigation ul {
     position: relative;
     left: 35%;
+    top: 1em;
   }
   .navigation ul a {
     color: #546971;
