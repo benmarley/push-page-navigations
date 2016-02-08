@@ -43,6 +43,7 @@ body.noscript .toggle-btn {
 header {
   padding: 0 1em;
   position: relative;
+  background-color: #FFA542;
 }
 
 .toggle-btn {
@@ -74,7 +75,7 @@ header {
 
 .toggle-btn,
 .close-btn {
-  color: #222;
+  color: #3A91B5;
   text-decoration: none;
   height: 40px;
   width: 40px;
@@ -138,9 +139,30 @@ header {
 }
 
 @media only screen and (min-width: 60em) {
+  .title-heading {
+    position: absolute;
+  }
   .toggle-btn,
   .close-btn {
     display: none;
+  }
+  .navigation ul {
+    position: relative;
+    left: 35%;
+  }
+  .navigation ul a {
+    color: #3A91B5;
+    float: left;
+    border: none;
+    top-border: none;
+    font-size: 140%;
+    border-right: 2px solid #3A91B5;
+  }
+  .navigation ul li:first-child a {
+    border-top: none;
+  }
+  .navigation ul li:last-child a {
+    border-right: none;
   }
 }
 

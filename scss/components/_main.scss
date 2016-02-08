@@ -31,6 +31,8 @@ body{
 header {
   padding: 0 1em;
   position: relative;
+  background-color: $peach;
+  // overflow: hidden;
 }
 
 .toggle-btn {
@@ -60,7 +62,7 @@ header {
 
 .toggle-btn,
 .close-btn {
-  color: $text-color;
+  color: $main-blue;
   text-decoration: none;
   height: 40px;
   width: 40px;
@@ -120,10 +122,38 @@ header {
 
 //reset the page when desktop even if nav is toggled open
 @media only screen and (min-width: 60em) {
-  .toggle-btn,
+
+  .title-heading {
+    position: absolute;
+  }
+
+   .toggle-btn,
   .close-btn {
     display: none;
   }
+
+  .navigation {
+  ul {
+    position: relative;
+    left: 35%;
+    a {
+      color: $main-blue;
+      float: left;
+      border: none;
+      top-border: none;
+      font-size: 140%;
+      border-right: 2px solid $main-blue; 
+    }
+    li:first-child a {
+      border-top: none; 
+    }
+    li:last-child a {
+      border-right: none;
+    }
+  }
+}
+
+ 
 }
 
 // show navigation on screen when there is no JS
@@ -132,5 +162,8 @@ body.noscript .navigation {
   position: static;
   right: auto;
 }
+
+
+
 
 
